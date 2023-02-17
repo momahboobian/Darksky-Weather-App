@@ -17,16 +17,15 @@
 }
 
 body {
-  height: 60vh;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-family: "Rubik", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   color: var(--dark-grey);
   background-color: #222222;
-  white-space: nowrap;
 }
 
 .main-container {
@@ -36,38 +35,44 @@ body {
   width: 390px;
 }
 .app-container {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  padding: 10px 20px;
+  gap: 20px;
+}
+.weather-container,
+.weather-info,
+.app-title {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
+  flex-direction: column;
+  color: #f9f9f9;
 }
 .weather-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* margin: 50px; */
-  padding: 20px;
+  flex-direction: row;
+  box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+  gap: 10px;
   background: var(--mid-purple);
-  border: 3px solid var(--light-purple);
+  /* border: 1px solid var(--light-purple); */
   border-radius: 25px;
+  padding: 10px 30px;
 }
 
 .weather-icon img {
-  width: 100px;
-  height: 100px;
-}
-
-.weather-info {
-  display: flex;
-  flex-direction: column;
-  margin-left: 20px;
+  width: 150px;
+  height: 150px;
+  margin-left: 0;
+  margin-left: -30px;
 }
 
 .temp {
   font-size: 30px;
   font-weight: bold;
   margin: 0;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 .country,
@@ -79,38 +84,41 @@ body {
 #forecast {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
 }
 
 .day {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   background-color: #f9f9f9;
   border-radius: 10px;
-  padding: 20px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   text-align: center;
+  width: 300px;
 }
 
 .day-name {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 
 .date {
   margin-top: 10px;
   font-size: 0.8rem;
+  font-weight: 400;
 }
 
-.icon {
-  width: 60px;
-  height: 60px;
+.day > .icon {
+  width: 100px;
+  height: 100px;
   margin-top: 10px;
 }
 
-.temp {
+.day > .temp {
   margin-top: 10px;
   font-size: 1.2rem;
   font-weight: bold;
